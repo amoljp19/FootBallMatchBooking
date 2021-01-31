@@ -23,13 +23,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/Rectangle10" />
+        app:srcCompat="@drawable/rectangle10" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="87.81dp"
         android:layout_height="79.02dp"
-        android:background="@drawable/IN_Stroke"
+        android:background="@drawable/in_stroke"
         android:cropToPadding="false"
         android:padding="5dp"
         android:paddingLeft="5dp"
@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/IN" />
+        app:srcCompat="@drawable/in"/>
 
     <ImageView
         android:id="@+id/imageView4"
