@@ -1,19 +1,19 @@
 package com.softaai.footballmatchbooking.data.api
 
-import com.softaai.footballmatchbooking.data.model.allevents.AllEventsResponse
-import com.softaai.footballmatchbooking.data.model.checkout.CheckoutResponse
-import com.softaai.footballmatchbooking.data.model.eventdetails.EventDetailsResponse
-import com.softaai.footballmatchbooking.data.model.purchase.PurchaseResponse
-import retrofit2.http.GET
+import com.softaai.footballmatchbooking.data.model.allevents.AllEvent
+import com.softaai.footballmatchbooking.data.model.checkout.Checkout
+import com.softaai.footballmatchbooking.data.model.eventdetails.EventDetail
+import com.softaai.footballmatchbooking.data.model.purchase.Purchase
+import retrofit2.Response
 
 interface BookingApiHelper {
 
-    suspend fun getAllEvents(): AllEventsResponse
+    suspend fun getAllEvents(): Response<List<AllEvent>>
 
-    suspend fun getEventDetails(): EventDetailsResponse
+    suspend fun getEventDetails(): Response<List<EventDetail>>
 
-    suspend fun getCheckout(): CheckoutResponse
+    suspend fun getCheckout(): Response<List<Checkout>>
 
-    suspend fun getPurchase(): PurchaseResponse
+    suspend fun getPurchase(): Response<List<Purchase>>
 
 }
