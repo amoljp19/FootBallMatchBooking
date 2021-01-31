@@ -4,8 +4,9 @@ import com.softaai.footballmatchbooking.data.model.allevents.AllEventsResponse
 import com.softaai.footballmatchbooking.data.model.checkout.CheckoutResponse
 import com.softaai.footballmatchbooking.data.model.eventdetails.EventDetailsResponse
 import com.softaai.footballmatchbooking.data.model.purchase.PurchaseResponse
+import javax.inject.Inject
 
-class BookingApiHelperImpl constructor (private val bookingApiService: FootballMatchBookingApiService) : BookingApiHelper {
+class BookingApiHelperImpl @Inject constructor (private val bookingApiService: FootballMatchBookingApiService) : BookingApiHelper {
 
     override suspend fun getAllEvents(): AllEventsResponse = bookingApiService.getAllEvents()
 
