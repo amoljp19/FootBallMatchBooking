@@ -21,5 +21,5 @@ data class Checkout(
     @Json(name = "paymentMethodUnsupported")
     val paymentMethodUnsupported: String,
     @Json(name = "price")
-    val price: Int
+    val price: Float
 )
