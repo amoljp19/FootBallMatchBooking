@@ -27,7 +27,7 @@ data class EventDetail(
     @Json(name = "name")
     val name: String,
     @Json(name = "price")
-    val price: Int,
+    val price: Float,
     @Json(name = "sport")
     val sport: String,
     @Json(name = "tags")
@@ -37,7 +37,7 @@ data class EventDetail(
     @Json(name = "ticketsSold")
     val ticketsSold: Int,
     @Json(name = "totalPrize")
-    val totalPrize: Int,
+    val totalPrize: Float,
     @Json(name = "venueInformation")
     val venueInformation: String
 )
