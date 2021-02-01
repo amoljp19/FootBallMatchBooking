@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //setupAllEventObserver()
         //setupEventDetailsObserver()
-        setupCheckoutObserver()
-       // setupPurchaseObserver()
+        //setupCheckoutObserver()
+          setupPurchaseObserver()
     }
 
     private fun setupAllEventObserver() {
