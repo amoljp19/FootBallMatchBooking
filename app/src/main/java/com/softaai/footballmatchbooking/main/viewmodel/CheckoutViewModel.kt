@@ -33,8 +33,8 @@ class CheckoutViewModel @Inject constructor(
             _checkout.postValue(Resource.loading(null))
             checkoutRepository.getCheckout().let {
                 if (it.isSuccessful) {
-                    _checkout.postValue(Resource.success(it.body()))
-                } else _error.postValue(Resource.error(null, it.errorBody().toString()))
+                    _checkout.postValue(Resource.success(it.body()?.checkoutList))
+                } else _checkout.postValue(Resource.error(it.errorBody().toString(), null))
             }
         }
     }

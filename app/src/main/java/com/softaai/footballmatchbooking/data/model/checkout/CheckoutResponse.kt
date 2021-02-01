@@ -7,5 +7,5 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class CheckoutResponse(
     @Json(name = "checkout")
-    val checkout: List<Checkout>
+    val checkoutList: List<Checkout>
 )

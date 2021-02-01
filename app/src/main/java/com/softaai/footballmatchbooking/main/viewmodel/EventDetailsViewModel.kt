@@ -34,8 +34,8 @@ class EventDetailsViewModel @Inject constructor(
             _eventDetails.postValue(Resource.loading(null))
             eventDetailsRepository.getEventDetails().let {
                 if (it.isSuccessful) {
-                    _eventDetails.postValue(Resource.success(it.body()))
-                } else _error.postValue(Resource.error(null, it.errorBody().toString()))
+                    _eventDetails.postValue(Resource.success(it.body()?.eventDetailsList))
+                } else _eventDetails.postValue(Resource.error(it.errorBody().toString(), null))
             }
         }
     }

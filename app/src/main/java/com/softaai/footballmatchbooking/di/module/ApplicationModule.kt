@@ -8,7 +8,11 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
+import okhttp3.internal.connection.ConnectInterceptor.intercept
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
@@ -23,7 +27,8 @@ class ApplicationModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient() =  OkHttpClient.Builder().build()
+    fun provideOkHttpClient() = OkHttpClient.Builder().addInterceptor(RequestInterceptor()).build();
+
 
 
     @Provides

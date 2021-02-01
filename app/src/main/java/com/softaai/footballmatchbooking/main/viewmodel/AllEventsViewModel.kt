@@ -30,8 +30,11 @@ class AllEventsViewModel @Inject constructor(
             _allEvents.postValue(Resource.loading(null))
             allEventsRepository.getAllEvents().let {
                     if (it.isSuccessful) {
-                        _allEvents.postValue(Resource.success(it.body()))
-                    } else _error.postValue(Resource.error(null, it.errorBody().toString()))
+                        _allEvents.postValue(Resource.success(it.body()?.allEventsList))
+                    } else
+                    {
+                        _allEvents.postValue(Resource.error(it.errorBody().toString(), null))
+                    }
                 }
         }
     }

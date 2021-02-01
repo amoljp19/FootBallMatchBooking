@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                     it.data?.let { allEvent -> Toast.makeText(this, "" + allEvent, Toast.LENGTH_LONG).show() }
                 }
                 Status.LOADING -> {
-
+                    Toast.makeText(this, "Loading...Wait", Toast.LENGTH_LONG).show()
                 }
                 Status.ERROR -> {
                     Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()

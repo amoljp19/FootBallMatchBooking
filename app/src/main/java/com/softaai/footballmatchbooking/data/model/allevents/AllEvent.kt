@@ -1,4 +1,6 @@
 package com.softaai.footballmatchbooking.data.model.allevents
+
+
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -18,16 +20,18 @@ data class AllEvent(
     val isRecommended: Boolean,
     @Json(name = "location")
     val location: String,
+    @Json(name = "mainImage")
+    val mainImage: String,
     @Json(name = "maxTickets")
     val maxTickets: Int,
     @Json(name = "name")
     val name: String,
     @Json(name = "price")
-    val price: Int,
+    val price: Float,
     @Json(name = "sport")
     val sport: String,
     @Json(name = "ticketsSold")
     val ticketsSold: Int,
     @Json(name = "totalPrize")
-    val totalPrize: Int
+    val totalPrize: Float
 )

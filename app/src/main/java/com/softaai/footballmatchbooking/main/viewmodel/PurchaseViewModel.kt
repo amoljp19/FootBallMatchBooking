@@ -33,8 +33,8 @@ class PurchaseViewModel @Inject constructor(
             _purchase.postValue(Resource.loading(null))
             purchaseRepository.getPurchase().let {
                 if (it.isSuccessful) {
-                    _purchase.postValue(Resource.success(it.body()))
-                } else _error.postValue(Resource.error(null, it.errorBody().toString()))
+                    _purchase.postValue(Resource.success(it.body()!!.purchaseList))
+                } else _purchase.postValue(Resource.error(it.errorBody().toString(), null))
             }
         }
     }
