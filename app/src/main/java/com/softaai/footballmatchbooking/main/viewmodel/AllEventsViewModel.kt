@@ -17,10 +17,6 @@ class AllEventsViewModel @Inject constructor(
     val allEvents: LiveData<Resource<List<AllEvent>>>
         get() = _allEvents
 
-    private val _error = MutableLiveData<Resource<String>>()
-    val error: LiveData<Resource<String>>
-        get() = _error
-
     init {
         fetchAllEvents()
     }
@@ -35,7 +31,7 @@ class AllEventsViewModel @Inject constructor(
                     {
                         _allEvents.postValue(Resource.error(it.errorBody().toString(), null))
                     }
-                }
+            }
         }
     }
 

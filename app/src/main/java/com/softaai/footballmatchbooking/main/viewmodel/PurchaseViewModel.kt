@@ -20,10 +20,6 @@ class PurchaseViewModel @Inject constructor(
     val purchase: LiveData<Resource<List<Purchase>>>
         get() = _purchase
 
-    private val _error = MutableLiveData<Resource<String>>()
-    val error: LiveData<Resource<String>>
-        get() = _error
-
     init {
         fetchPurchase()
     }

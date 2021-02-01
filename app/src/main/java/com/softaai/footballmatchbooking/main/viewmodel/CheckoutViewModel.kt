@@ -20,10 +20,6 @@ class CheckoutViewModel @Inject constructor(
     val checkout: LiveData<Resource<List<Checkout>>>
         get() = _checkout
 
-    private val _error = MutableLiveData<Resource<String>>()
-    val error: LiveData<Resource<String>>
-        get() = _error
-
     init {
         fetchCheckout()
     }

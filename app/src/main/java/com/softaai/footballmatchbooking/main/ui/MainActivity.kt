@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //setupAllEventObserver()
+        setupAllEventObserver()
         //setupEventDetailsObserver()
         //setupCheckoutObserver()
-          setupPurchaseObserver()
+        //setupPurchaseObserver()
     }
 
     private fun setupAllEventObserver() {

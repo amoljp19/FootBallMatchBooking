@@ -21,10 +21,6 @@ class EventDetailsViewModel @Inject constructor(
     val eventDetails: LiveData<Resource<List<EventDetail>>>
         get() = _eventDetails
 
-    private val _error = MutableLiveData<Resource<String>>()
-    val error: LiveData<Resource<String>>
-        get() = _error
-
     init {
         fetchEventDetails()
     }
